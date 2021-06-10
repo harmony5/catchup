@@ -10,8 +10,12 @@ homepage = "https://github.com/harmony5/catchup"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+typer = "^0.3.2"
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+catchup = "catchup.cli:cli"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
