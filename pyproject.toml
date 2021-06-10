@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "catchup"
+version = "0.1.0"
+description = "Simple CLI app to manage your to-do's."
+authors = ["harmony5 <jeancgo@pm.me>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/harmony5/catchup"
+homepage = "https://github.com/harmony5/catchup"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
