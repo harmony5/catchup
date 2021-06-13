@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "catchup"
-version = "0.1.0"
+version = "0.4.2"
 description = "Simple CLI app to manage your to-do's."
 authors = ["harmony5 <jeancgo@pm.me>"]
 license = "MIT"
@@ -11,6 +11,8 @@ homepage = "https://github.com/harmony5/catchup"
 [tool.poetry.dependencies]
 python = "^3.8"
 typer = "^0.3.2"
+dataset = "^1.5.0"
+tabulate = "^0.8.9"
 
 [tool.poetry.dev-dependencies]
 
