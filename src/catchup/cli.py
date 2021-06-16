@@ -21,19 +21,10 @@ def show():
 def add(todo: str):
     """Add new to-do.
     """
-    todo_id = str(hash(todo))[:6]
-    db.add_todo(todo_id, todo)
+    db.add_todo(todo)
 
-    typer.echo(f"Added {todo} to todos.txt:")
-
-    typer.echo("Id\tDescription\tStatus\tCreated At")
-    for todo in db.get_todos_by_status("In Progress"):
-        typer.echo(
-            f"{todo['id']}\t"
-            f"{todo['description']}\t"
-            f"{todo['status']}\t"
-            f"{todo['creation_date']}"
-        )
+    typer.echo(f"Saved new to-do to the Database: {todo}")
+    typer.echo(tab(db.get_todos_by_status("In Progress"), headers="keys"))
 
 
 @cli.command()
@@ -51,7 +42,8 @@ def remove(todo_id: int):
     """Remove the to-do specified by <todo_id> from the list.
     """
     todo = db.get_todo(todo_id)
-    typer.echo(f"Removed to-do with id #{todo_id}: {todo['description']}.")
+    db.delete_todo(todo_id)
+    typer.echo(f"Removed to-do with id #{todo_id}: {todo['description']}")
 
 
 if __name__ == "__main__":
