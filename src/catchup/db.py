@@ -1,8 +1,13 @@
 import dataset
+from datetime import datetime
 
 
 DB = dataset.connect("sqlite:///todos.db")
-TODOS = DB["todos"]
+
+TODOS: dataset.Table = DB.create_table("todos", primary_id="id")
+TODOS.create_column("description", DB.types.text)
+TODOS.create_column("status", DB.types.string(12))
+# .create_column("timestamp", DB.types.datetime, nullable=False, default=now())
 
 
 def get_todos():
@@ -24,17 +29,21 @@ def add_todo(description: str):
     global TODOS
 
     TODOS.insert(
-        {"description": description, "status": "In Progress",}
+        {
+            "description": description,
+            "status": "In Progress",
+            "timestamp": datetime.now(),
+        }
     )
 
 
 def update_todo(todo_id: int, **fields):
     global TODOS
 
-    data = fields.update({"id": todo_id})
-
+    fields.update({"id": todo_id})
+    
     # Update fields in all rows with matching id's.
-    TODOS.update(row=data, keys=["id"])
+    TODOS.update(row=fields, keys=["id"])
 
 
 def delete_todo(todo_id: int):

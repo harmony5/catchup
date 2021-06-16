@@ -31,9 +31,9 @@ def add(todo: str):
 def complete(todo_id: int):
     """Mark the to-do specified by <todo_id> as completed.
     """
-    todo = db.get_todo(todo_id)
+    db.update_todo(todo_id, status='Completed')
     typer.echo(
-        f"Todo with id #{todo_id} {todo['description']} was marked as completed."
+        f"Todo with id #{todo_id} was marked as completed."
     )
 
 
