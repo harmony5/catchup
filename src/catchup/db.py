@@ -1,5 +1,4 @@
 import dataset
-from datetime import datetime
 
 
 DB = dataset.connect("sqlite:///todos.db")
@@ -25,12 +24,7 @@ def add_todo(description: str):
     global TODOS
 
     TODOS.insert(
-        {
-            # "id": str(hash(description))[:6],
-            "description": description,
-            "status": "In Progress",
-            # "creation_date": str(datetime.now()),
-        }
+        {"description": description, "status": "In Progress",}
     )
 
 
