@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "catchup"
-version = "0.4.8"
+version = "0.5.2"
 description = "Simple CLI app to manage your to-do's."
 authors = ["harmony5 <jeancgo@pm.me>"]
 license = "MIT"
