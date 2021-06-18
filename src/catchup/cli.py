@@ -1,7 +1,7 @@
 """CLI tool to manage your to-do's.
 """
 
-from typing import Optional
+from typing import Iterator, Mapping, Optional, Any
 import typer
 from tabulate import tabulate as tab
 import src.catchup.db as db
@@ -62,9 +62,9 @@ def show(
     """Show saved to-do's.
     """
     if status:
-        todos = db.get_todos_by_status(status.title())
+        todos: Iterator[Mapping[str, Any]] = db.get_todos_by_status(status.title())
     else:
-        todos = db.get_todos()
+        todos: Iterator[Mapping[str, Any]] = db.get_todos()
     typer.echo(tab(todos, headers="keys"))
 
 
