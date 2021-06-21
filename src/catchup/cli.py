@@ -1,11 +1,13 @@
 """CLI tool to manage your to-do's.
 """
 
-from typing import Iterator, Mapping, Optional, Any
+from typing import Any, Iterator, Mapping, Optional
+
 import typer
 from tabulate import tabulate as tab
-import src.catchup.db as db
-from src.catchup import __version__
+
+from . import db
+from . import __version__
 
 
 cli = typer.Typer(help=__doc__)

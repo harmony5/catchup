@@ -1,3 +1,6 @@
+"""Easily manage the embedded To-Do's DB for catchup CLI
+"""
+
 from typing import Iterator, Any, Mapping
 import dataset
 from datetime import datetime
@@ -8,7 +11,7 @@ DB: dataset.Database = dataset.connect("sqlite:///todos.db")
 TODOS: dataset.Table = DB.create_table("todos", primary_id="id")
 TODOS.create_column("description", DB.types.text)
 TODOS.create_column("status", DB.types.string(12))
-# .create_column("timestamp", DB.types.datetime, nullable=False, default=now())
+TODOS.create_column("timestamp", DB.types.datetime, nullable=False)  # , default=now())
 
 
 def get_todos() -> Iterator[Mapping[str, Any]]:
