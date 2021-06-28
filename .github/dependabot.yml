@@ -10,9 +10,9 @@ updates:
       interval: "daily"
     allow:
       # Allow both direct and indirect updates for Typer
-      dependency-name: "typer"
-      dependency-type: "all"
+      - dependency-name: "typer"
+        dependency-type: "all"
       
       # Allow both direct and indirect updates for dataset
-      dependency-name: "dataset"
-      dependency-type: "all"
+      - dependency-name: "dataset"
+        dependency-type: "all"
