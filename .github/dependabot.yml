@@ -1,0 +1,18 @@
+# Basic set up for poetry
+
+version: 2
+updates:
+
+  # Maintain dependencies for Python Poetry
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      # Allow both direct and indirect updates for Typer
+      - dependency-name: "typer"
+        dependency-type: "all"
+      
+      # Allow both direct and indirect updates for dataset
+      - dependency-name: "dataset"
+        dependency-type: "all"
