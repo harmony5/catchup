@@ -81,7 +81,7 @@ $ catchup show
 
 ## Contributing ✍
 
-Pull requests are welcome. For major changes, [bug fixes](https://github.com/harmony5/catchup/issues/new?template=bug_report.md&labels=bug&projects=harmony5%2Fcatchup%2F1) or [feature requests](https://github.com/harmony5/catchup/issues/new?template=feature_request.md&labels=bug&projects=harmony5%2Fcatchup%2F1), please open an issue first to discuss what you would like to change.
+[Pull requests](https://github.com/harmony5/catchup/pulls/new) are welcome. For major changes, [bug fixes](https://github.com/harmony5/catchup/issues/new?template=bug_report.md&labels=bug&projects=harmony5%2Fcatchup%2F1) or [feature requests](https://github.com/harmony5/catchup/issues/new?template=feature_request.md&projects=harmony5%2Fcatchup%2F1), please open an issue first to discuss what you would like to change.
 
 ## License 📜⚖
 
