@@ -14,10 +14,10 @@ cli = typer.Typer(help=__doc__)
 
 
 STATE = {"verbose": False}
-VALID_STATUSES = [
-    ('"in progress"', "shows only to-do's in progress."),
-    ("completed", "shows only completed to-do's."),
-]
+VALID_STATUSES = {
+    "in progress": "shows only to-do's in progress.",
+    "completed": "shows only completed to-do's.",
+}
 
 
 def version_callback(value: bool):
@@ -27,7 +27,7 @@ def version_callback(value: bool):
 
 
 def status_callback(status: Optional[str]):
-    if status is not None and status.lower() not in ("in progress", "completed"):
+    if status is not None and status.lower() not in VALID_STATUSES.keys():
         raise typer.BadParameter(
             "Status '{status}' not recognized. Must be one of 'in progress' or 'completed'."
         )
@@ -35,7 +35,7 @@ def status_callback(status: Optional[str]):
 
 
 def status_completion(incomplete: str):
-    for status, help_msg in VALID_STATUSES:
+    for status, help_msg in VALID_STATUSES.items():
         if status.startswith(incomplete):
             yield (status, help_msg)
 
