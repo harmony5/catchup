@@ -33,7 +33,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "dataset"
-version = "1.5.1"
+version = "1.5.2"
 description = "Toolkit for Python-based database access."
 category = "main"
 optional = false
@@ -45,7 +45,7 @@ banal = ">=1.0.1"
 sqlalchemy = ">=1.3.2"
 
 [package.extras]
-dev = ["pip", "pytest", "wheel", "flake8", "coverage", "psycopg2-binary", "pymysql", "cryptography"]
+dev = ["cryptography", "pip", "pytest", "wheel", "flake8", "coverage", "psycopg2-binary", "pymysql"]
 
 [[package]]
 name = "greenlet"
@@ -170,7 +170,7 @@ test = ["shellingham (>=1.3.0,<2.0.0)", "pytest (>=4.4.0,<5.4.0)", "pytest-cov (
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "b0b76553e711ca76e39215e0d0d3af5f7afc008b2995fa9991cc80020d719b36"
+content-hash = "1206cf162f7c829b62c2a81d7d7c0570a1d400478329b61bc5d1b9965ff328c7"
 
 [metadata.files]
 alembic = [
@@ -186,8 +186,8 @@ click = [
     {file = "click-7.1.2.tar.gz", hash = "sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"},
 ]
 dataset = [
-    {file = "dataset-1.5.1-py2.py3-none-any.whl", hash = "sha256:a1ff061a08f8f4856bfed541a13cb2ded29d74aa26dd3078c7f397bf9d3a0283"},
-    {file = "dataset-1.5.1.tar.gz", hash = "sha256:037615522fe1c019e46af961036e6fe6fb051c9812dc95e1fb02fd80f98798d5"},
+    {file = "dataset-1.5.2-py2.py3-none-any.whl", hash = "sha256:3eb75426c422146acd150ed68aee39984050f8dd8e985675ba084732e6ccbf79"},
+    {file = "dataset-1.5.2.tar.gz", hash = "sha256:4c367a7c0a85c4e748efda34eee300c3fcc3f076c75c3290b749a7a05335c847"},
 ]
 greenlet = [
     {file = "greenlet-1.1.0-cp27-cp27m-macosx_10_14_x86_64.whl", hash = "sha256:60848099b76467ef09b62b0f4512e7e6f0a2c977357a036de602b653667f5f4c"},
