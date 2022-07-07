@@ -10,7 +10,7 @@ homepage = "https://github.com/harmony5/catchup"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-typer = "^0.4.1"
+typer = "^0.5.0"
 dataset = "^1.5.2"
 tabulate = "^0.8.9"
 
